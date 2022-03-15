@@ -4,3 +4,5 @@
 double distance(int destination);
 void menu();
 void delay(unsigned int value);
+void planetSelector();
+void rocketLaunch();

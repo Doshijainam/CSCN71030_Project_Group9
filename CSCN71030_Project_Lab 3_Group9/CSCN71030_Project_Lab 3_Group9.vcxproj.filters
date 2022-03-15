@@ -21,6 +21,9 @@
     <ClCompile Include="Parameters.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RocketLaunchAnimation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parameter.h">

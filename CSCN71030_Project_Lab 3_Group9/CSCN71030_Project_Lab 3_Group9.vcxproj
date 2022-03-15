@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Parameters.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="RocketLaunchAnimation.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parameter.h" />
