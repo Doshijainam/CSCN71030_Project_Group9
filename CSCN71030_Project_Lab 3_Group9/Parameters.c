@@ -81,6 +81,7 @@ void planetSelector() {
 	}
 }
 
+//Moon time function
 void moonTime() {
 	int irand;
 	srand(time(NULL));
@@ -88,6 +89,7 @@ void moonTime() {
 	printf("It will take you approx %d hours.\n", irand);
 
 }
+//Sun time function
 void sunTime() {
 	int srand;
 	srand = rand() % (610 - 400 + 1) + 400;
@@ -95,6 +97,7 @@ void sunTime() {
 
 	printf("It will take you approx %d hours.\n", srand);
 }
+//Mars time function
 void marsTime() {
 	int Rrand;
 	Rrand = rand() % (5100 - 5000 + 1) + 5000;
