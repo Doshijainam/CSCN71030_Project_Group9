@@ -5,6 +5,7 @@
 #include "Parameter.h"
 
 #define MAX_STRING 100
+#define MASS 415000
 
 //Intro menu
 void menu() {
@@ -57,18 +58,24 @@ void planetSelector() {
 			choice = 1;
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
+			moonTime();
+			moonThrust();
 		}
 		//If user inputted string is Sun then give the distance to the Sun
 		else if (strcmp(planet, "Sun") == 0) {
 			choice = 2;
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You're gonna be here a while...\n\n");
+			sunTime();
+			sunThrust();
 		}
 		//If user inputted string is Mars then give the distance to the Mars
 		else if (strcmp(planet, "Mars") == 0) {
 			choice = 3;
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n\n");
+			marsTime();
+			marsThrust();
 		}
 		//If input is incorrect go back to entering a planet
 		else {
@@ -78,22 +85,42 @@ void planetSelector() {
 	}
 }
 
-void moonTime() {
-	int irand;
+int moonTime() {
+	int iRand;
 	srand(time(NULL));
-	irand = rand() % (230 - 60 + 1) + 60;  //  for moon 
-	printf("The time  for moon is %d\n", irand);
-
+	iRand = rand() % (230 - 60 + 1) + 60;  //  for moon 
+	printf("The time  for moon is %d\n", iRand);
+	return iRand;
 }
-void sunTime() {
-	int srand;
-	srand = rand() % (610 - 400 + 1) + 400;
+int sunTime() {
+	int sRand;
+	sRand = rand() % (610 - 400 + 1) + 400;
 	// for sun it would take 606 hours 
-
-	printf("The time for sun is %d\n", srand);
+	printf("The time for sun is %d\n", sRand);
+	return sRand;
 }
-void marsTime() {
-	int Rrand;
-	Rrand = rand() % (5100 - 5000 + 1) + 5000;
-	printf("The time for mars  is %d\n", Rrand);
+int marsTime() {
+	int rRand;
+	rRand = rand() % (5100 - 5000 + 1) + 5000;
+	printf("The time for mars  is %d\n", rRand);
+	return rRand;
+}
+
+//Thrust for moon = mass / time
+double moonThrust() {
+	double thrust = MASS / moonTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
+}
+//Thrust for sun = mass / time
+double sunThrust() {
+	double thrust = MASS / sunTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
+}
+//Thrust for mars = mass / time
+double marsThrust() {
+	double thrust = MASS / marsTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
 }
