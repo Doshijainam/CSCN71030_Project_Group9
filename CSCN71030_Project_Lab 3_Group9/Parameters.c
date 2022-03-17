@@ -5,6 +5,7 @@
 #include "Parameter.h"
 
 #define MAX_STRING 100
+#define MASS 415000
 
 //Intro menu
 void menu() {
@@ -19,17 +20,17 @@ double distance(int destination) {
 		//Moon
 	case 1:
 		distance = 384400;
-		printf("\n You have chosen the moon!\n Its just a short trip of ");
+		printf("\n You have chosen the moon!\n\n Its just a short trip of ");
 		break;
 		//Sun
 	case 2:
 		distance = 148750000;
-		printf("\n You have chosen the Sun!\n It's fairly warm there.\n It's ");
+		printf("\n You have chosen the Sun!\n\n It's fairly warm there.\n It's ");
 		break;
 		//Mars
 	case 3:
 		distance = 286820000;
-		printf("\n You have chosen Mars!\n I hope you find some alien life.\n It's ");
+		printf("\n You have chosen Mars!\n\n I hope you find some alien life.\n It's ");
 		break;
 	default:
 		EXIT_FAILURE;
@@ -46,8 +47,6 @@ void planetSelector() {
 	printf(" Planet: ");
 	scanf_s("%s", &planet, MAX_STRING);
 
-	//Null terminate string
-	planet - 1;
 	int choice;
 
 	//Dereference NULL pointer
@@ -57,49 +56,73 @@ void planetSelector() {
 			choice = 1;
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
-			moonTime();
+			moonThrust();
 		}
 		//If user inputted string is Sun then give the distance to the Sun
 		else if (strcmp(planet, "Sun") == 0) {
 			choice = 2;
 			printf("%.2lf", distance(choice));
-			printf(" kilometers from earth!\n You're gonna be here a while...\n");
-			sunTime();
+			printf(" kilometers from earth!\n You're gonna be here a while...\n\n");
+			sunThrust();
 		}
 		//If user inputted string is Mars then give the distance to the Mars
 		else if (strcmp(planet, "Mars") == 0) {
 			choice = 3;
 			printf("%.2lf", distance(choice));
-			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n");
-			marsTime();
+			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n\n");
+			marsThrust();
 		}
 		//If input is incorrect go back to entering a planet
 		else {
-			printf(" Incorrect Input please input correct planet name.\n");
+			printf(" Incorrect Input please input correct planet name.\n\n");
 			goto select;
 		}
 	}
 }
 
 //Moon time function
-void moonTime() {
-	int irand;
+int moonTime() {
+	long int irand;
 	srand(time(NULL));
 	irand = rand() % (230 - 60 + 1) + 60;  //  for moon 
-	printf("It will take you approx %d hours.\n", irand);
-
+	printf(" It will take you approx %d hours.\n\n", irand);
+	return irand;
 }
 //Sun time function
-void sunTime() {
-	int srand;
+int sunTime() {
+	long int srand;
 	srand = rand() % (610 - 400 + 1) + 400;
 	// for sun it would take 606 hours 
-
-	printf("It will take you approx %d hours.\n", srand);
+	printf(" It will take you approx %d hours.\n\n", srand);
+	return srand;
 }
 //Mars time function
-void marsTime() {
-	int Rrand;
+int marsTime() {
+	long int Rrand;
 	Rrand = rand() % (5100 - 5000 + 1) + 5000;
-	printf("It will take you approx %d hours.\n", Rrand);
+	printf(" It will take you approx %d hours.\n\n", Rrand);
+	return Rrand;
+}
+
+double velocity() {
+	return 0;
+}
+
+//Thrust for moon = mass / time
+double moonThrust() {
+	double thrust = MASS / moonTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
+}
+//Thrust for sun = mass / time
+double sunThrust() {
+	double thrust = MASS / sunTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
+}
+//Thrust for mars = mass / time
+double marsThrust() {
+	double thrust = MASS / marsTime();
+	printf(" Rocket thrust will be %.2lf.\n\n", thrust);
+	return thrust;
 }

@@ -16,6 +16,9 @@
 
 int main(int argc, char *argv[])
 {
+	char *n = argv[1];
+	double gravity = atoi(n);
+
 	//Function to have rocket launch animation at start
 	rocketLaunch();
 
