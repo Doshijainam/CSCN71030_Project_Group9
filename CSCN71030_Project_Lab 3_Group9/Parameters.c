@@ -77,3 +77,23 @@ void planetSelector() {
 		}
 	}
 }
+
+void moonTime() {
+	int irand;
+	srand(time(NULL));
+	irand = rand() % (230 - 60 + 1) + 60;  //  for moon 
+	printf("The time  for moon is %d\n", irand);
+
+}
+void sunTime() {
+	int srand;
+	srand = rand() % (610 - 400 + 1) + 400;
+	// for sun it would take 606 hours 
+
+	printf("The time for sun is %d\n", srand);
+}
+void marsTime() {
+	int Rrand;
+	Rrand = rand() % (5100 - 5000 + 1) + 5000;
+	printf("The time for mars  is %d\n", Rrand);
+}

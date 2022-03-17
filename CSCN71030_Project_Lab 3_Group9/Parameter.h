@@ -6,3 +6,6 @@ void menu();
 void delay(unsigned int value);
 void planetSelector();
 void rocketLaunch();
+void moonTime();
+void marsTime();
+void sunTime();
