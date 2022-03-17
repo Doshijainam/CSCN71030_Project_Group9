@@ -57,46 +57,23 @@ void planetSelector() {
 			choice = 1;
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
-			moonTime();
 		}
 		//If user inputted string is Sun then give the distance to the Sun
 		else if (strcmp(planet, "Sun") == 0) {
 			choice = 2;
 			printf("%.2lf", distance(choice));
-			printf(" kilometers from earth!\n You're gonna be here a while...\n");
-			sunTime();
+			printf(" kilometers from earth!\n You're gonna be here a while...\n\n");
 		}
 		//If user inputted string is Mars then give the distance to the Mars
 		else if (strcmp(planet, "Mars") == 0) {
 			choice = 3;
 			printf("%.2lf", distance(choice));
-			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n");
-			marsTime();
+			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n\n");
 		}
 		//If input is incorrect go back to entering a planet
 		else {
-			printf(" Incorrect Input please input correct planet name.\n");
+			printf(" Incorrect Input please input correct planet name.\n\n");
 			goto select;
 		}
 	}
-}
-
-void moonTime() {
-	int irand;
-	srand(time(NULL));
-	irand = rand() % (230 - 60 + 1) + 60;  //  for moon 
-	printf("It will take you approx %d hours.\n", irand);
-
-}
-void sunTime() {
-	int srand;
-	srand = rand() % (610 - 400 + 1) + 400;
-	// for sun it would take 606 hours 
-
-	printf("It will take you approx %d hours.\n", srand);
-}
-void marsTime() {
-	int Rrand;
-	Rrand = rand() % (5100 - 5000 + 1) + 5000;
-	printf("It will take you approx %d hours.\n", Rrand);
 }
