@@ -11,6 +11,8 @@
 #include<stdlib.h>
 #include <string.h>
 #include "Parameter.h"
+#include "Files.h"
+#include "Structure.h"
 
 #define MAX_STRING 100
 
@@ -18,6 +20,17 @@ int main(int argc, char *argv[])
 {
 	char *n = argv[1];
 	double gravity = atoi(n);
+
+	//Check if a file exists, if not make a new file
+	if (checkIfFileExists("file.txt")) {
+		readOpenFile();
+	}
+	else {
+		writeOpenFile();
+	}
+
+	//Allocate memory for the structure
+	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
 
 	//Function to have rocket launch animation at start
 	rocketLaunch();
