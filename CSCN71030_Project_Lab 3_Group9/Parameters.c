@@ -54,7 +54,7 @@ void planetSelector() {
 			printf("\n You have chosen the moon!\n\n Its just a short trip of ");
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
-			printf(" It will take you approx %d hours.\n\n", moonTime());
+			printf(" It will take you approx %ld hours.\n\n", moonTime());
 			moonThrust();
 			moonVelocity();
 		}
@@ -64,7 +64,7 @@ void planetSelector() {
 			printf("\n You have chosen the Sun!\n\n It's fairly warm there.\n It's ");
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You're gonna be here a while...\n\n");
-			printf(" It will take you approx %d hours.\n\n", sunThrust());
+			printf(" It will take you approx %ld hours.\n\n", sunTime());
 			sunThrust();
 			sunVelocity();
 		}
@@ -74,7 +74,7 @@ void planetSelector() {
 			printf("\n You have chosen Mars!\n\n I hope you find some alien life.\n It's ");
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n\n");
-			printf(" It will take you approx %d hours.\n\n", marsThrust());
+			printf(" It will take you approx %ld hours.\n\n", marsTime());
 			marsThrust();
 			marsVelocity();
 		}
