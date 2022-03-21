@@ -141,12 +141,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Files.c" />
+    <ClCompile Include="Financials.c" />
     <ClCompile Include="Parameters.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="RocketLaunchAnimation.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Files.h" />
+    <ClInclude Include="Financials.h" />
     <ClInclude Include="Parameter.h" />
     <ClInclude Include="Structure.h" />
   </ItemGroup>
