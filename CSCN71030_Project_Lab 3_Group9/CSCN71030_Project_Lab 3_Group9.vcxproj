@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Financials.c" />
     <ClCompile Include="Parameters.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="RocketLaunchAnimation.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Financials.h" />
     <ClInclude Include="Parameter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

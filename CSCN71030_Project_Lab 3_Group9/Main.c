@@ -11,6 +11,8 @@
 #include<stdlib.h>
 #include <string.h>
 #include "Parameter.h"
+#include "Financials.h"
+#define USE_CRT_SECURE_NO_WARNINGS
 
 #define MAX_STRING 100
 
@@ -27,4 +29,6 @@ int main(int argc, char *argv[])
 	
 	//Calls function for user to select a planet
 	planetSelector();
+	displaySalaryChart();
+
 }
