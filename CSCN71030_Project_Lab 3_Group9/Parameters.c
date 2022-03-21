@@ -55,8 +55,11 @@ void planetSelector() {
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
 			printf(" It will take you approx %ld hours.\n\n", moonTime());
-			moonThrust();
-			moonVelocity();
+			printf(" Rocket thrust will be %.2lf Newtons\n\n", moonThrust());
+			printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", moonVelocity());
+			printf(" The acceleration will be %.2lf m/s.\n\n", moonAcceleration());
+			printf(" The momentum will be %.2f Km/h.\n\n", moonMomentum());
+			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", moonForce());
 		}
 		//If user inputted string is Sun then give the distance to the Sun
 		else if (strcmp(planet, "Sun") == 0) {
@@ -65,8 +68,11 @@ void planetSelector() {
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You're gonna be here a while...\n\n");
 			printf(" It will take you approx %ld hours.\n\n", sunTime());
-			sunThrust();
-			sunVelocity();
+			printf(" Rocket thrust will be %.2lf Newtons\n\n", sunThrust());
+			printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", sunVelocity());
+			printf(" The acceleration will be %.2lf m/s.\n\n", sunAcceleration());
+			printf(" The momentum will be %.2f Km/h.\n\n", sunMomentum());
+			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", sunForce());
 		}
 		//If user inputted string is Mars then give the distance to the Mars
 		else if (strcmp(planet, "Mars") == 0) {
@@ -75,8 +81,11 @@ void planetSelector() {
 			printf("%.2lf", distance(choice));
 			printf(" kilometers from earth!\n You'll spend the rest of your life waiting...\n\n");
 			printf(" It will take you approx %ld hours.\n\n", marsTime());
-			marsThrust();
-			marsVelocity();
+			printf(" Rocket thrust will be %.2lf Newtons\n\n", marsThrust());
+			printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", marsVelocity());
+			printf(" The acceleration will be %.2lf m/s.\n\n", marsAcceleration());
+			printf(" The momentum will be %.2f Km/h.\n\n", marsMomentum());
+			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", marsForce());
 		}
 		//If input is incorrect go back to entering a planet
 		else {
@@ -111,40 +120,80 @@ int marsTime() {
 //Thrust for moon = mass / time
 double moonThrust() {
 	double thrust = MASS / moonTime();
-	printf(" Rocket thrust will be %.2lf Newtons\n\n", thrust);
 	return thrust;
 }
 //Thrust for sun = mass / time
 double sunThrust() {
 	double thrust = MASS / sunTime();
-	printf(" Rocket thrust will be %.2lf Newtons\n\n", thrust);
 	return thrust;
 }
 //Thrust for mars = mass / time
 double marsThrust() {
 	double thrust = MASS / marsTime();
-	printf(" Rocket thrust will be %.2lf Newtons\n\n", thrust);
 	return thrust;
 }
 
 //Velocity for moon = distance / time
-double moonVelocity()
-{
+double moonVelocity() {
 	double velocity = distance(1) / moonTime();
-	printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", velocity);
 	return velocity;
 }
 //Velocity for sun = distance / time
-double sunVelocity()
-{
+double sunVelocity() {
 	double velocity = distance(2) / sunTime();
-	printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", velocity);
 	return velocity;
 }
 //Velocity for mars = distance / time
-double marsVelocity()
-{
+double marsVelocity() {
 	double velocity = distance(3) / marsTime();
-	printf(" The Velocity of the rocket will be %.2lf Km/h.\n\n", velocity);
 	return velocity;
+}
+
+//Moon acceleration = velocity / time
+double moonAcceleration() {
+	double acceleration = moonVelocity() / moonTime();
+	return acceleration;
+}
+//Sun acceleration
+double sunAcceleration() {
+	double acceleration = sunVelocity() / sunTime();
+	return acceleration;
+}
+//Mars acceleration
+double marsAcceleration() {
+	double acceleration = marsVelocity() / marsTime();
+	return acceleration;
+}
+
+//Moon momentum = mass * velocity
+double moonMomentum() {
+	double momentum = MASS * moonVelocity();
+	return momentum;
+
+}
+//Sun momentum
+double sunMomentum() {
+	double momentum = MASS * sunVelocity();
+	return momentum;
+}
+//Mars momentum
+double marsMomentum() {
+	double momentum = MASS * marsVelocity();
+	return momentum;
+}
+
+//Force = mass * acceleration
+double moonForce() {
+	double force = MASS * moonAcceleration();
+	return force;
+}
+//Sun force
+double sunForce() {
+	double force = MASS * sunAcceleration();
+	return force;
+}
+//Mars force
+double marsForce() {
+	double force = MASS * marsAcceleration();
+	return force;
 }
