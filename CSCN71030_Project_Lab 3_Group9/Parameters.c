@@ -88,23 +88,24 @@ void planetSelector() {
 
 //Moon time function
 int moonTime() {
-	long int irand;
+	long int iRand;
 	srand(time(NULL));
-	irand = rand() % (230 - 60 + 1) + 60;  //  for moon 
-	return irand;
+	iRand = rand() % (230 - 60 + 1) + 60;  //  for moon 
+	return iRand;
+	return iRand;
 }
 //Sun time function
 int sunTime() {
-	long int srand;
-	srand = rand() % (610 - 400 + 1) + 400;
+	long int sRand;
+	sRand = rand() % (610 - 400 + 1) + 400;
 	// for sun it would take 606 hours 
-	return srand;
+	return sRand;
 }
 //Mars time function
 int marsTime() {
-	long int Rrand;
-	Rrand = rand() % (5100 - 5000 + 1) + 5000;
-	return Rrand;
+	long int rRand;
+	rRand = rand() % (5100 - 5000 + 1) + 5000;
+	return rRand;
 }
 
 //Thrust for moon = mass / time
