@@ -54,9 +54,9 @@ void planetSelector() {
 	//Dereference NULL pointer
 	if (planet != "\0") {
 		//If user inputted string is Moon then give the distance to the Moon
-		if (strcmp(planet, "Moon") == 0) {
+		if (strcmp(planet, "Moon") == 0 || strcmp(planet, "moon") == 0 || strcmp(planet, "MOON") == 0) {
 			choice = 1;
-			printf("\n You have chosen the moon!\n\n Its just a short trip of ");
+			printf("\n You have chosen the Moon!\n\n Its just a short trip of ");
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
 			printf(" It will take you approx %ld hours.\n\n", moonTime());
@@ -67,7 +67,7 @@ void planetSelector() {
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", moonForce());
 		}
 		//If user inputted string is Sun then give the distance to the Sun
-		else if (strcmp(planet, "Sun") == 0) {
+		else if (strcmp(planet, "Sun") == 0 || strcmp(planet, "sun") == 0 || strcmp(planet, "SUN") == 0) {
 			choice = 2;
 			printf("\n You have chosen the Sun!\n\n It's fairly warm there.\n It's ");
 			printf("%.2lf", distance(choice));
@@ -80,7 +80,7 @@ void planetSelector() {
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", sunForce());
 		}
 		//If user inputted string is Mars then give the distance to the Mars
-		else if (strcmp(planet, "Mars") == 0) {
+		else if (strcmp(planet, "Mars") == 0 || strcmp(planet, "mars") == 0 || strcmp(planet, "MARS") == 0) {
 			choice = 3;
 			printf("\n You have chosen Mars!\n\n I hope you find some alien life.\n It's ");
 			printf("%.2lf", distance(choice));
