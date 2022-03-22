@@ -1,7 +1,7 @@
 #pragma once
 
-int displaySalaryChart();
+void displaySalaryChart();
 int department3StaffSalary();
 int department2StaffSalary();
 int department1StaffSalary();
-double buildCosts();
+int buildCosts();

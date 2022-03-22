@@ -65,7 +65,6 @@ void planetSelector() {
 			printf(" The acceleration will be %.2lf m/s.\n\n", moonAcceleration());
 			printf(" The momentum will be %.2f Km/h.\n\n", moonMomentum());
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", moonForce());
-			updateFile();
 		}
 		//If user inputted string is Sun then give the distance to the Sun
 		else if (strcmp(planet, "Sun") == 0) {
@@ -79,7 +78,6 @@ void planetSelector() {
 			printf(" The acceleration will be %.2lf m/s.\n\n", sunAcceleration());
 			printf(" The momentum will be %.2f Km/h.\n\n", sunMomentum());
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", sunForce());
-			updateFile();
 		}
 		//If user inputted string is Mars then give the distance to the Mars
 		else if (strcmp(planet, "Mars") == 0) {
@@ -93,7 +91,6 @@ void planetSelector() {
 			printf(" The acceleration will be %.2lf m/s.\n\n", marsAcceleration());
 			printf(" The momentum will be %.2f Km/h.\n\n", marsMomentum());
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", marsForce());
-			updateFile();
 		}
 		//If input is incorrect go back to entering a planet
 		else {
@@ -101,18 +98,20 @@ void planetSelector() {
 			goto select;
 		}
 	}
+	updateFile();
 }
 
 //Moon time function
 int moonTime() {
-	long int iRand;
 	srand(time(NULL));
+	long int iRand;
 	iRand = rand() % (230 - 60 + 1) + 60;  //  for moon
 	save[0].time = iRand;
 	return iRand;
 }
 //Sun time function
 int sunTime() {
+	srand(time(NULL));
 	long int sRand;
 	sRand = rand() % (610 - 400 + 1) + 400; // for sun
 	save[1].time = sRand;
@@ -120,6 +119,7 @@ int sunTime() {
 }
 //Mars time function
 int marsTime() {
+	srand(time(NULL));
 	long int rRand;
 	rRand = rand() % (5100 - 5000 + 1) + 5000;
 	save[2].time = rRand;

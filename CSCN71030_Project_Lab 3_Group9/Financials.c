@@ -4,19 +4,24 @@
 #include <math.h>
 #include "Parameter.h"
 #include "Financials.h"
+#include "Files.h"
+
 #define USE_CRT_SECURE_NO_WARNINGS
 #define DEPT1_SALARY 15000
 #define DEPT2_SALARY 30000
 #define DEPT3_SALARY 50000
 #define FUEL_COST_PER_UNIT 1000
 #define FUEL_EFFICIENCY 2000000
-double buildCosts()
-{
-	double *buildCost = malloc(sizeof(double));
+
+//Total cost for build
+int buildCosts()
+{	//Assign memory to store build cost
+	long int *buildCost = malloc(sizeof(double));
+	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
 	return *buildCost;
 }
-
+//Cost for staff in dep 1
 int department1StaffSalary()
 {
 	int staff,salary;
@@ -25,7 +30,7 @@ int department1StaffSalary()
 	salary = staff * DEPT1_SALARY;
 	return salary;
 }
-
+//Cost for staff in dep 2
 int department2StaffSalary()
 {
 	int staff, salary;
@@ -34,7 +39,7 @@ int department2StaffSalary()
 	salary = staff * DEPT2_SALARY;
 	return salary;
 }
-
+//Cost for staff in dep 3
 int department3StaffSalary()
 {
 	int staff, salary;
@@ -43,11 +48,11 @@ int department3StaffSalary()
 	salary = staff * DEPT3_SALARY;
 	return salary;
 }
-
-int displaySalaryChart()
+//Salary display chart for each department
+void displaySalaryChart()
 {
 	int salary[3] = { 15000,30000,50000 };
-	int i, j;
+	int i;
 	for (i = 0; i < 3; i++)
 	{
 		printf("\nDepartment %d has salary $%d", i + 1, salary[i]);

@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 	
 	//Calls function for user to select a planet
 	planetSelector();
+
 	displaySalaryChart();
 
 }

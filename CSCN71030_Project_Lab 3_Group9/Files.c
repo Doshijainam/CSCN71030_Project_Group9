@@ -22,7 +22,7 @@ void readOpenFile() {
 
 	//Scan for contents in file
 	for (int i = 1; i < PLANETS; i++) {
-		if (fscanf(fpFile, "%lf %d %lf %lf %lf %lf %lf\n", &distance, &time, &momentum, &force, &acceleration, &thrust, &velocity) == 7);
+		if (fscanf(fpFile, "%Lf %ld %Lf %Lf %Lf %Lf %Lf\n", &distance, &time, &momentum, &force, &acceleration, &thrust, &velocity) == 7);
 		save[i].distance = distance;
 		save[i].time = time;
 		save[i].acceleration = acceleration;
@@ -58,7 +58,7 @@ void updateFile() {
 
 	//Update data into file
 	for (int i = 0; i < PLANETS; i++) {
-		fprintf(fpFile, "%.2lf %d %.2lf %.2lf %.2lf %.2lf %.2lf\n", save[i].distance, save[i].time, save[i].momentum, save[i].force, save[i].acceleration, save[i].thrust, save[i].velocity);
+		fprintf(fpFile, "%.2Lf %ld %.2Lf %.2Lf %.2Lf %.2Lf %.2Lf\n", save[i].distance, save[i].time, save[i].momentum, save[i].force, save[i].acceleration, save[i].thrust, save[i].velocity);
 	}
 	//Close file
 	fclose(fpFile);
