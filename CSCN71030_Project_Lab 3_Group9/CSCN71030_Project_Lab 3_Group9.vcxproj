@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Files.c" />
+    <ClCompile Include="finanacialsFileSaving.c" />
     <ClCompile Include="Financials.c" />
     <ClCompile Include="Parameters.c" />
     <ClCompile Include="Main.c" />
@@ -148,7 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Files.h" />
+    <ClInclude Include="finanacialsFileData.h" />
     <ClInclude Include="Financials.h" />
+    <ClInclude Include="financialStructure.h" />
     <ClInclude Include="Parameter.h" />
     <ClInclude Include="Structure.h" />
   </ItemGroup>

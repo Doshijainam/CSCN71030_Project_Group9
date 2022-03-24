@@ -14,6 +14,8 @@
 #include "Files.h"
 #include "Structure.h"
 #include "Financials.h"
+#include"financialStructure.h"
+#include"finanacialsFileData.h"
 #define USE_CRT_SECURE_NO_WARNINGS
 
 #define MAX_STRING 100
@@ -31,8 +33,16 @@ int main(int argc, char *argv[])
 		writeOpenFile();
 	}
 
+	if (fileExists("financial.txt")) {
+		readFinancial();
+	}
+	else {
+		writeFinancial();
+	}
+
 	//Allocate memory for the structure
 	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
+	struct financial* set = (struct financial*)malloc(sizeof(struct financial));
 
 	//Function to have rocket launch animation at start
 	rocketLaunch();
@@ -45,5 +55,7 @@ int main(int argc, char *argv[])
 	
 	//Displays salary chart for departments 1,2,3
 	displaySalaryChart();
+
+
 
 }

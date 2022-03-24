@@ -5,6 +5,9 @@
 #include "Parameter.h"
 #include "Financials.h"
 #include "Files.h"
+#include "Structure.h"
+#include"finanacialsFileData.h"
+#include "financialStructure.h"
 
 #define USE_CRT_SECURE_NO_WARNINGS
 #define DEPT1_SALARY 15000
@@ -19,6 +22,8 @@ int buildCosts()
 	long int buildCost;
 	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
+	set->buildcosts = buildCost;
+	updateFile();
 	return buildCost;
 }
 //Cost for staff in dep 1
@@ -28,6 +33,8 @@ int department1StaffSalary()
 	printf("\nNumber of Employees in Deparment 1:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT1_SALARY;
+	set[0].salary = salary;
+	updateFile();
 	return salary;
 }
 //Cost for staff in dep 2
@@ -37,6 +44,8 @@ int department2StaffSalary()
 	printf("\nNumber of Employees in Deparment 2:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT2_SALARY;
+	set[1].salary = salary;
+	updateFile();
 	return salary;
 }
 //Cost for staff in dep 3
@@ -46,6 +55,8 @@ int department3StaffSalary()
 	printf("\nNumber of Employees in Deparment 3:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT3_SALARY;
+	set[2].salary = salary;
+	updateFile();
 	return salary;
 }
 //Salary display chart for each department
@@ -64,6 +75,8 @@ double fuelCosts(int distance)
 	double fuelcost,total_efficiency;
 	total_efficiency = (FUEL_EFFICIENCY * distance) / 1000;
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
+	set->fuelcosts= fuelcost;
+	updateFile();
 	return fuelcost;
 
 }

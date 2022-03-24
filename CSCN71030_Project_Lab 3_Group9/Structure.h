@@ -10,6 +10,8 @@ struct parameters {
 	long double acceleration;
 	long double momentum;
 	long double force;
+	long int salary;
+	long int staff;
 };
 
 struct parameters save[PLANETS];
