@@ -5,6 +5,7 @@
 #include "Parameter.h"
 #include "Financials.h"
 #include "Files.h"
+#include "ParameterStructure.h"
 
 #define USE_CRT_SECURE_NO_WARNINGS
 #define DEPT1_SALARY 15000
@@ -16,16 +17,17 @@
 //Total cost for build
 int buildCosts()
 {	//Assign memory to store build cost
-	long int *buildCost = malloc(sizeof(double));
+	long int buildCost;
 	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
-	return *buildCost;
+	printf("\n Total build cost: $%ld", buildCost);
+	return buildCost;
 }
 //Cost for staff in dep 1
 int department1StaffSalary()
 {
 	int staff,salary;
-	printf("\nNumber of Employees in Deparment 1:");
+	printf("\n Number of Employees in Deparment 1:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT1_SALARY;
 	return salary;
@@ -34,7 +36,7 @@ int department1StaffSalary()
 int department2StaffSalary()
 {
 	int staff, salary;
-	printf("\nNumber of Employees in Deparment 2:");
+	printf("\n Number of Employees in Deparment 2:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT2_SALARY;
 	return salary;
@@ -43,7 +45,7 @@ int department2StaffSalary()
 int department3StaffSalary()
 {
 	int staff, salary;
-	printf("\nNumber of Employees in Deparment 3:");
+	printf("\n Number of Employees in Deparment 3:");
 	scanf_s("%d", &staff);
 	salary = staff * DEPT3_SALARY;
 	return salary;
@@ -55,7 +57,7 @@ void displaySalaryChart()
 	int i;
 	for (i = 0; i < 3; i++)
 	{
-		printf("\nDepartment %d has salary $%d", i + 1, salary[i]);
+		printf("\n Department %d has salary $%d", i + 1, salary[i]);
 	}
 }
 

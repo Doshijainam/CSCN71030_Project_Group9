@@ -38,7 +38,7 @@
     <ClInclude Include="Files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Structure.h">
+    <ClInclude Include="ParameterStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Financials.h">

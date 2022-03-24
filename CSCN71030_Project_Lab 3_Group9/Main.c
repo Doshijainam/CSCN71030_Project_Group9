@@ -12,7 +12,7 @@
 #include <string.h>
 #include "Parameter.h"
 #include "Files.h"
-#include "Structure.h"
+#include "ParameterStructure.h"
 #include "Financials.h"
 #define USE_CRT_SECURE_NO_WARNINGS
 
@@ -46,4 +46,5 @@ int main(int argc, char *argv[])
 	//Displays salary chart for departments 1,2,3
 	displaySalaryChart();
 
+	buildCosts();
 }

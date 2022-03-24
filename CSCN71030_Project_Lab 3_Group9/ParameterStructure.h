@@ -10,6 +10,7 @@ struct parameters {
 	long double acceleration;
 	long double momentum;
 	long double force;
+	char info[MAX];
 };
 
 struct parameters save[PLANETS];

@@ -150,7 +150,7 @@
     <ClInclude Include="Files.h" />
     <ClInclude Include="Financials.h" />
     <ClInclude Include="Parameter.h" />
-    <ClInclude Include="Structure.h" />
+    <ClInclude Include="ParameterStructure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
