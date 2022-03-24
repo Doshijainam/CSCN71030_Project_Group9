@@ -42,7 +42,8 @@ int main(int argc, char *argv[])
 	
 	//Calls function for user to select a planet
 	planetSelector();
-
+	
+	//Displays salary chart for departments 1,2,3
 	displaySalaryChart();
 
 }

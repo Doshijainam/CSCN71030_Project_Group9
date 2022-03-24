@@ -21,7 +21,7 @@ void readOpenFile() {
 	double distance, momentum, force, acceleration, thrust, velocity;
 
 	//Scan for contents in file
-	for (int i = 1; i < PLANETS; i++) {
+	for (int i = 0; i < PLANETS; i++) {
 		if (fscanf(fpFile, "%Lf %ld %Lf %Lf %Lf %Lf %Lf\n", &distance, &time, &momentum, &force, &acceleration, &thrust, &velocity) == 7);
 		save[i].distance = distance;
 		save[i].time = time;
