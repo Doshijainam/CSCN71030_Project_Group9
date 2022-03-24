@@ -15,11 +15,11 @@
 
 //Total cost for build
 int buildCosts()
-{	//Assign memory to store build cost
-	long int *buildCost = malloc(sizeof(double));
+{
+	long int buildCost;
 	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
-	return *buildCost;
+	return buildCost;
 }
 //Cost for staff in dep 1
 int department1StaffSalary()
@@ -66,6 +66,12 @@ double fuelCosts(int distance)
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
 	return fuelcost;
 
+}
+
+double overallCosts(int dept1,int dept2,int dept3,int buildcosts,double fuelcosts)
+{
+	double overallcosts = dept1 + dept2 + dept3 + fuelcosts + buildcosts;
+	return overallcosts;
 }
 
 
