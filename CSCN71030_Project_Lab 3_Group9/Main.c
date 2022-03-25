@@ -16,6 +16,7 @@
 
 int main(int argc, char *argv[])
 {
+
 	//Function to have rocket launch animation at start
 	rocketLaunch();
 

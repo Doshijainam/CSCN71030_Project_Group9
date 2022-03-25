@@ -3,6 +3,8 @@
 #include <string.h>
 #include <math.h>
 #include "Parameter.h"
+#include "Files.h"
+#include "ParameterStructure.h"
 
 #define MAX_STRING 100
 #define MASS 415000
@@ -20,14 +22,17 @@ double distance(int destination) {
 		//Moon
 	case 1:
 		distance = 384400;
+		save[0].distance = distance;
 		break;
 		//Sun
 	case 2:
 		distance = 148750000;
+		save[1].distance = distance;
 		break;
 		//Mars
 	case 3:
 		distance = 286820000;
+		save[2].distance = distance;
 		break;
 	default:
 		EXIT_FAILURE;
@@ -49,9 +54,9 @@ select:
 	//Dereference NULL pointer
 	if (planet != "\0") {
 		//If user inputted string is Moon then give the distance to the Moon
-		if (strcmp(planet, "Moon") == 0) {
+		if (strcmp(planet, "Moon") == 0 || strcmp(planet, "moon") == 0 || strcmp(planet, "MOON") == 0) {
 			choice = 1;
-			printf("\n You have chosen the moon!\n\n Its just a short trip of ");
+			printf("\n You have chosen the Moon!\n\n Its just a short trip of ");
 			printf("%.2lf", distance(choice));
 			printf(" kilometers!\n\n");
 			printf(" It will take you approx %ld hours.\n\n", moonTime());
@@ -62,7 +67,7 @@ select:
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", moonForce());
 		}
 		//If user inputted string is Sun then give the distance to the Sun
-		else if (strcmp(planet, "Sun") == 0) {
+		else if (strcmp(planet, "Sun") == 0 || strcmp(planet, "sun") == 0 || strcmp(planet, "SUN") == 0) {
 			choice = 2;
 			printf("\n You have chosen the Sun!\n\n It's fairly warm there.\n It's ");
 			printf("%.2lf", distance(choice));
@@ -75,7 +80,7 @@ select:
 			printf(" The force applied to the rocket will be %.2lf Newtons.\n\n", sunForce());
 		}
 		//If user inputted string is Mars then give the distance to the Mars
-		else if (strcmp(planet, "Mars") == 0) {
+		else if (strcmp(planet, "Mars") == 0 || strcmp(planet, "mars") == 0 || strcmp(planet, "MARS") == 0) {
 			choice = 3;
 			printf("\n You have chosen Mars!\n\n I hope you find some alien life.\n It's ");
 			printf("%.2lf", distance(choice));
@@ -93,107 +98,128 @@ select:
 			goto select;
 		}
 	}
+
+	strcpy(save[3].info, "Distance Time Momentum Force Acceleration Thrust Velocity");
+	updateFile();
 }
 
 //Moon time function
 int moonTime() {
-	long int iRand;
 	srand(time(NULL));
-	iRand = rand() % (230 - 60 + 1) + 60;  //  for moon 
-	return iRand;
+	long int iRand;
+	iRand = rand() % (230 - 60 + 1) + 60;  //  for moon
+	save[0].time = iRand;
 	return iRand;
 }
 //Sun time function
 int sunTime() {
+	srand(time(NULL));
 	long int sRand;
-	sRand = rand() % (610 - 400 + 1) + 400;
-	// for sun it would take 606 hours 
+	sRand = rand() % (610 - 400 + 1) + 400; // for sun
+	save[1].time = sRand;
 	return sRand;
 }
 //Mars time function
 int marsTime() {
+	srand(time(NULL));
 	long int rRand;
 	rRand = rand() % (5100 - 5000 + 1) + 5000;
+	save[2].time = rRand;
 	return rRand;
 }
 
 //Thrust for moon = mass / time
 double moonThrust() {
 	double thrust = MASS / moonTime();
+	save[0].thrust = thrust;
 	return thrust;
 }
 //Thrust for sun = mass / time
 double sunThrust() {
 	double thrust = MASS / sunTime();
+	save[1].thrust = thrust;
 	return thrust;
 }
 //Thrust for mars = mass / time
 double marsThrust() {
 	double thrust = MASS / marsTime();
+	save[2].thrust = thrust;
 	return thrust;
 }
 
 //Velocity for moon = distance / time
 double moonVelocity() {
 	double velocity = distance(1) / moonTime();
+	save[0].velocity = velocity;
 	return velocity;
 }
 //Velocity for sun = distance / time
 double sunVelocity() {
 	double velocity = distance(2) / sunTime();
+	save[1].velocity = velocity;
 	return velocity;
 }
 //Velocity for mars = distance / time
 double marsVelocity() {
 	double velocity = distance(3) / marsTime();
+	save[2].velocity = velocity;
 	return velocity;
 }
 
 //Moon acceleration = velocity / time
 double moonAcceleration() {
 	double acceleration = moonVelocity() / moonTime();
+	save[0].acceleration = acceleration;
 	return acceleration;
 }
 //Sun acceleration
 double sunAcceleration() {
 	double acceleration = sunVelocity() / sunTime();
+	save[1].acceleration = acceleration;
 	return acceleration;
 }
 //Mars acceleration
 double marsAcceleration() {
 	double acceleration = marsVelocity() / marsTime();
+	save[2].acceleration = acceleration;
 	return acceleration;
 }
 
 //Moon momentum = mass * velocity
 double moonMomentum() {
 	double momentum = MASS * moonVelocity();
+	save[0].momentum = momentum;
 	return momentum;
 
 }
 //Sun momentum
 double sunMomentum() {
 	double momentum = MASS * sunVelocity();
+	save[1].momentum = momentum;
 	return momentum;
 }
 //Mars momentum
 double marsMomentum() {
 	double momentum = MASS * marsVelocity();
+	save[2].momentum = momentum;
 	return momentum;
 }
 
 //Force = mass * acceleration
 double moonForce() {
 	double force = MASS * moonAcceleration();
+	save[0].force = force;
 	return force;
 }
 //Sun force
 double sunForce() {
 	double force = MASS * sunAcceleration();
+	save[1].force = force;
 	return force;
 }
 //Mars force
 double marsForce() {
 	double force = MASS * marsAcceleration();
+	save[2].force = force;
 	return force;
 }
