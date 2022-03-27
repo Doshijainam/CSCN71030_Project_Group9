@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Files.h"
-#include "Structure.h"
+#include "ParameterStructure.h"
 #include"finanacialsFileData.h"
 #include"financialStructure.h"
 
