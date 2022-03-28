@@ -57,4 +57,6 @@ int main(int argc, char *argv[])
 	displaySalaryChart();
 
 	buildCosts();
+
+	printf("\n ROCKET LAUNCH SUCCESS!\n\n");
 }
