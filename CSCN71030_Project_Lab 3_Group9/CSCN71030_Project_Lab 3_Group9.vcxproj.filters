@@ -30,6 +30,9 @@
     <ClCompile Include="Financials.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="finanacialsFileSaving.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="characteristics.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -41,10 +44,16 @@
     <ClInclude Include="Files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Structure.h">
+    <ClInclude Include="ParameterStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Financials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="finanacialsFileData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="financialStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="characteristics.h">

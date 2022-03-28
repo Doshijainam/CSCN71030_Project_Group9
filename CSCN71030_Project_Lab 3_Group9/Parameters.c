@@ -5,7 +5,7 @@
 #include <string.h>
 #include <math.h>
 #include "Files.h"
-#include "Structure.h"
+#include "ParameterStructure.h"
 
 #define MAX_STRING 100
 #define MASS 415000
@@ -99,6 +99,8 @@ void planetSelector() {
 			goto select;
 		}
 	}
+
+	strcpy(save[3].info, "Distance Time Momentum Force Acceleration Thrust Velocity");
 	updateFile();
 }
 

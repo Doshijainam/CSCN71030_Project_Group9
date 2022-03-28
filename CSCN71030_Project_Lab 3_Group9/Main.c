@@ -12,9 +12,12 @@
 #include <string.h>
 #include "Parameter.h"
 #include "Files.h"
+#include "ParameterStructure.h"
 #include "Structure.h"
 #include "characteristics.h"
 #include "Financials.h"
+#include"financialStructure.h"
+#include"finanacialsFileData.h"
 #define USE_CRT_SECURE_NO_WARNINGS
 
 #define MAX_STRING 100
@@ -32,6 +35,14 @@ int main(int argc, char *argv[])
 	else {
 		writeOpenFile();
 	}
+
+	if (fileExists("financial.txt")) {
+		readFinancial();
+	}
+	else {
+		writeFinancial();
+	}
+
 	 
 	
 	//char array[4]; 
@@ -43,6 +54,7 @@ int main(int argc, char *argv[])
 	temp = CalculatingTemperatureMoon();
 	//Allocate memory for the structure
 	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
+	struct financial* set = (struct financial*)malloc(sizeof(struct financial));
 
 	//Function to have rocket launch animation at start
 	rocketLaunch();
@@ -52,7 +64,11 @@ int main(int argc, char *argv[])
 	
 	//Calls function for user to select a planet
 	planetSelector();
-
+	
+	//Displays salary chart for departments 1,2,3
 	displaySalaryChart();
 
+	buildCosts();
+
+	printf("\n ROCKET LAUNCH SUCCESS!\n\n");
 }
