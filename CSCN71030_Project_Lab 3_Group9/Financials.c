@@ -6,12 +6,14 @@
 #include "Financials.h"
 #include "Files.h"
 
+
 #define USE_CRT_SECURE_NO_WARNINGS
 #define DEPT1_SALARY 15000
 #define DEPT2_SALARY 30000
 #define DEPT3_SALARY 50000
 #define FUEL_COST_PER_UNIT 1000
 #define FUEL_EFFICIENCY 2000000
+
 
 //Total cost for build
 int buildCosts()
@@ -52,6 +54,7 @@ int department3StaffSalary()
 void displaySalaryChart()
 {
 	int salary[3] = { 15000,30000,50000 };
+
 	int i;
 	for (i = 0; i < 3; i++)
 	{

@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="characteristics.c" />
     <ClCompile Include="Files.c" />
     <ClCompile Include="Financials.c" />
     <ClCompile Include="Parameters.c" />
@@ -147,6 +148,7 @@
     <ClCompile Include="RocketLaunchAnimation.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="characteristics.h" />
     <ClInclude Include="Files.h" />
     <ClInclude Include="Financials.h" />
     <ClInclude Include="Parameter.h" />

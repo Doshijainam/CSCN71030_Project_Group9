@@ -1,8 +1,9 @@
+
+#include "Parameter.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "Parameter.h"
 #include "Files.h"
 #include "Structure.h"
 

@@ -11,6 +11,7 @@ int checkIfFileExists(const char* file) {
 		return 1;
 	}
 	return 0;
+
 }
 
 void readOpenFile() {

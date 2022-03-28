@@ -13,6 +13,7 @@
 #include "Parameter.h"
 #include "Files.h"
 #include "Structure.h"
+#include "characteristics.h"
 #include "Financials.h"
 #define USE_CRT_SECURE_NO_WARNINGS
 
@@ -27,10 +28,19 @@ int main(int argc, char *argv[])
 	if (checkIfFileExists("file.txt")) {
 		readOpenFile();
 	}
+
 	else {
 		writeOpenFile();
 	}
-
+	 
+	
+	//char array[4]; 
+	
+	printf("The mass is %d \n", CalculatingMass()); 
+	TypesofRocket(); 
+	DeterminingBodymaterials(); 
+	double* temp; 
+	temp = CalculatingTemperatureMoon();
 	//Allocate memory for the structure
 	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
 
