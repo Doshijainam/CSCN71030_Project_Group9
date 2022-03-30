@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSCN71030_Project_Lab 3_Gro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Parameter Unit Tests", "Parameter Unit Tests\Parameter Unit Tests.vcxproj", "{0DB81049-58CA-4902-B5F2-D89C0E3481A0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "financialsUnitTests", "financialsUnitTests\financialsUnitTests.vcxproj", "{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{0DB81049-58CA-4902-B5F2-D89C0E3481A0}.Release|x64.Build.0 = Release|x64
 		{0DB81049-58CA-4902-B5F2-D89C0E3481A0}.Release|x86.ActiveCfg = Release|Win32
 		{0DB81049-58CA-4902-B5F2-D89C0E3481A0}.Release|x86.Build.0 = Release|Win32
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Debug|x64.ActiveCfg = Debug|x64
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Debug|x64.Build.0 = Debug|x64
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Debug|x86.ActiveCfg = Debug|Win32
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Debug|x86.Build.0 = Debug|Win32
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Release|x64.ActiveCfg = Release|x64
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Release|x64.Build.0 = Release|x64
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Release|x86.ActiveCfg = Release|Win32
+		{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@
 #include "Parameter.h"
 #include "Files.h"
 #include "ParameterStructure.h"
-#include "Structure.h"
+#include "ParameterStructure.h"
 #include "characteristics.h"
 #include "Financials.h"
 #include"financialStructure.h"

@@ -31,33 +31,33 @@ int buildCosts()
 	return buildCost;
 }
 //Cost for staff in dep 1
-int department1StaffSalary()
+int department1StaffSalary(int staff)
 {
-	int staff,salary;
-	printf("\n Number of Employees in Deparment 1:");
-	scanf_s("%d", &staff);
+	int salary;
+	//printf("\n Number of Employees in Deparment 1:");
+	//scanf_s("%d", &staff);
 	salary = staff * DEPT1_SALARY;
 	set[0].salary = salary;
 	updateFile();
 	return salary;
 }
 //Cost for staff in dep 2
-int department2StaffSalary()
+int department2StaffSalary(int staff)
 {
-	int staff, salary;
-	printf("\n Number of Employees in Deparment 2:");
-	scanf_s("%d", &staff);
+	int salary;
+	//printf("\n Number of Employees in Deparment 2:");
+	//scanf_s("%d", &staff);
 	salary = staff * DEPT2_SALARY;
 	set[1].salary = salary;
 	updateFile();
 	return salary;
 }
 //Cost for staff in dep 3
-int department3StaffSalary()
+int department3StaffSalary(int staff)
 {
-	int staff, salary;
-	printf("\n Number of Employees in Deparment 3:");
-	scanf_s("%d", &staff);
+	int salary;
+	//printf("\n Number of Employees in Deparment 3:");
+	//scanf_s("%d", &staff);
 	salary = staff * DEPT3_SALARY;
 	set[2].salary = salary;
 	updateFile();

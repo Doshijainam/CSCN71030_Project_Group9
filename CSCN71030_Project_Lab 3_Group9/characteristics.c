@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include "Files.h"
-#include "Structure.h"
+#include "ParameterStructure.h"
 #include "Parameter.h"
 #include "Financials.h"
 // #define Temperature_Sun 5000 
