@@ -24,7 +24,7 @@ int buildCosts()
 	long int buildCost;
 	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
-	printf("\n Total build cost: $%ld", buildCost);
+	printf("\n\n Total build cost: $%ld", buildCost);
 	return buildCost;
 	set->buildcosts = buildCost;
 	printf("The build cost is %lf \n", buildCost); 
@@ -72,7 +72,7 @@ void displaySalaryChart()
 	int i;
 	for (i = 0; i < 3; i++)
 	{
-		printf("\n Department %d has salary $%d", i + 1, salary[i]);
+		printf("\n Department %d has a salary of: $%d", i + 1, salary[i]);
 	}
 }
 
