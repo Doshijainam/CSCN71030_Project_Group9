@@ -81,7 +81,9 @@ double fuelCosts(int distance)
 	total_efficiency = (FUEL_EFFICIENCY * distance) / 1000;
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
 	set->fuelcosts= fuelcost;
+    
 	updateFile();
+
 	return fuelcost;
 
 }

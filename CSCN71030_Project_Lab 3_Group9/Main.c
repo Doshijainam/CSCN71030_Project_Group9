@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	printf("The mass is %d \n", CalculatingMass()); 
 	TypesofRocket(); 
 	DeterminingBodymaterials(); 
-	double* temp; 
+	double *  temp; 
 	temp = CalculatingTemperatureMoon();
 	//Allocate memory for the structure
 	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
