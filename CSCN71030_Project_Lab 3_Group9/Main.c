@@ -42,6 +42,25 @@ int main(int argc, char *argv[])
 	else {
 		writeFinancial();
 	}
+	
+	//Allocate memory for the structure
+	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
+	struct financial* set = (struct financial*)malloc(sizeof(struct financial));
+
+	//Function to have rocket launch animation at start
+	rocketLaunch();
+
+	//Determines mass of rocket
+	printf("The mass of the rocket is: %d \n\n", CalculatingMass());
+
+	//User inputs type of rocket
+	TypesofRocket();
+	
+	//User inputs rocket material
+	DeterminingBodymaterials();
+
+	//User inputs temperaures at different planets
+	double* temp;
 
 	 
 	
@@ -52,12 +71,6 @@ int main(int argc, char *argv[])
 	DeterminingBodymaterials(); 
 	double *  temp; 
 	temp = CalculatingTemperatureMoon();
-	//Allocate memory for the structure
-	struct parameters *save = (struct parameters*)malloc(sizeof(struct parameters));
-	struct financial* set = (struct financial*)malloc(sizeof(struct financial));
-
-	//Function to have rocket launch animation at start
-	rocketLaunch();
 
 	//Prints intro menu
 	menu();
@@ -68,7 +81,8 @@ int main(int argc, char *argv[])
 	//Displays salary chart for departments 1,2,3
 	displaySalaryChart();
 
+	//Displays build costs
 	buildCosts();
 
-	printf("\n ROCKET LAUNCH SUCCESS!\n\n");
+	printf("\n\n ROCKET LAUNCH SUCCESS!\n\n");
 }
