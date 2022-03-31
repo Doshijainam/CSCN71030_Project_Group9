@@ -27,6 +27,7 @@ int buildCosts()
 	printf("\n Total build cost: $%ld", buildCost);
 	return buildCost;
 	set->buildcosts = buildCost;
+	printf("The build cost is %lf \n", buildCost); 
 	updateFile();
 	return buildCost;
 }
@@ -81,7 +82,7 @@ double fuelCosts(int distance)
 	total_efficiency = (FUEL_EFFICIENCY * distance) / 1000;
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
 	set->fuelcosts= fuelcost;
-    
+	printf("The total fuel cost is %lf\n", fuelcost); 
 	updateFile();
 
 	return fuelcost;

@@ -39,9 +39,6 @@ struct Characteristics characteristics;
 
 	
 
-	 printf("Enter the type of rocket you want \nIt can be in  either Solid or in liquid state: ");
-
-		 char Type[MAX] = "\0";
 	 
 
 	 printf("Enter the type of rocket you want \n It can be in  either Solid or in liquid state \n"); 
@@ -76,7 +73,6 @@ struct Characteristics characteristics;
 
 
 
-double * CalculatingTemperatureMoon(  ) {
 
 double* CalculatingTemperatureMoon() {
 	const int Destination = 3; 
@@ -88,11 +84,10 @@ double* CalculatingTemperatureMoon() {
 			printf("Enter the temperature \n"); 
 			scanf_s("%lf", &characteristics.Temperature[i]);
 
-			if (characteristics.Temperature[i] > 200 || characteristics.Temperature < 500) {
+			 
 				printf("Temperature at Destination %d is %lf", i + 1, characteristics.Temperature[i]);
-			}
-			else
-				return 0; 
+			
+			
 
 			printf("Destination %d , Day %d\n", i + 1, j + 1);
 			printf("Enter the temperature: ");
