@@ -4,6 +4,7 @@ extern "C" int buildCosts();
 extern "C" int department1StaffSalary(int staff);
 extern "C" int department2StaffSalary(int staff);
 extern "C" int department3StaffSalary(int staff);
+extern "C" int CalculatingMass();
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -12,7 +13,7 @@ namespace financialsUnitTests
 	TEST_CLASS(financialsUnitTests)
 	{
 	public:
-		
+
 		TEST_METHOD(REQ_001_buildCosts)
 		{
 			int max = 400000000;
@@ -34,7 +35,7 @@ namespace financialsUnitTests
 			int result = staff * department1Salary;
 			int actual = department1StaffSalary(staff);
 			Assert::AreEqual(result, actual);
-			
+
 		}
 
 		TEST_METHOD(REQ_003_department2)
@@ -56,5 +57,7 @@ namespace financialsUnitTests
 			Assert::AreEqual(result, actual);
 
 		}
+
+
+		};
 	};
-}

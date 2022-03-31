@@ -81,6 +81,20 @@ int main(int argc, char *argv[])
 
 	//Displays build costs
 	buildCosts();
+	if (distance(0))
+	{
+		fuelCosts(384400);	
+	}
+	else if (distance(1))
+	{
+		fuelCosts(148750000);
+	}
+	else if (distance(2))
+	{
+		fuelCosts(286820000);
+	}
+
+	
 
 	printf("\n\n ROCKET LAUNCH SUCCESS!\n\n");
 }

@@ -82,9 +82,8 @@ double fuelCosts(int distance)
 	total_efficiency = (FUEL_EFFICIENCY * distance) / 1000;
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
 	set->fuelcosts= fuelcost;
-	printf("The total fuel cost is %lf\n", fuelcost); 
+	printf("\nThe total fuel cost is %lf\n", fuelcost); 
 	updateFile();
-
 	return fuelcost;
 
 }
@@ -93,6 +92,7 @@ double overallCosts(int dept1,int dept2,int dept3,int buildcosts,double fuelcost
 {
 	double overallcosts = dept1 + dept2 + dept3 + fuelcosts + buildcosts;
 	return overallcosts;
+	printf("\nThe overall cost for the entire mission is : %lf", overallcosts);
 }
 
 
