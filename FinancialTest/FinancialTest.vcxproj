@@ -99,7 +99,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\JIGNESH PATEL\source\repos\CSCN71030_Project_Lab3_Group9\SpaceWare project\CSCN71030_Project_Lab 3_Group9\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\colem\source\repos\CSCN71030_Project_Lab3_Group9\CSCN71030_Project_Lab 3_Group9\x64\Debug;C:\Users\JIGNESH PATEL\source\repos\CSCN71030_Project_Lab3_Group9\SpaceWare project\CSCN71030_Project_Lab 3_Group9\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Files.obj;Financials.obj;Parameters.obj;RocketLaunchAnimation.obj;characteristics.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

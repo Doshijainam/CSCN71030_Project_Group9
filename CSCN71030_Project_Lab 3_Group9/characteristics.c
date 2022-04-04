@@ -80,6 +80,5 @@ double* CalculatingTemperatureMoon() {
 			}
 			return 0;
 		}
-	}
 	return characteristics.Temperature;
 }
