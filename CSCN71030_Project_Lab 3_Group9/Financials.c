@@ -24,7 +24,7 @@ int buildCosts()
 	long int buildCost;
 	//Random build cost
 	buildCost = rand() % (400000000 - 200000000 + 1) + 200000000;
-	printf("\n Total build cost: $%ld", buildCost);
+	printf("\n\n Total build cost: $%ld", buildCost);
 	return buildCost;
 	set->buildcosts = buildCost;
 	printf("The build cost is %lf \n", buildCost); 
@@ -72,7 +72,7 @@ void displaySalaryChart()
 	int i;
 	for (i = 0; i < 3; i++)
 	{
-		printf("\n Department %d has salary $%d", i + 1, salary[i]);
+		printf("\n Department %d has a salary of: $%d", i + 1, salary[i]);
 	}
 }
 
@@ -82,9 +82,8 @@ double fuelCosts(int distance)
 	total_efficiency = (FUEL_EFFICIENCY * distance) / 1000;
 	fuelcost = total_efficiency * FUEL_COST_PER_UNIT;
 	set->fuelcosts= fuelcost;
-	printf("The total fuel cost is %lf\n", fuelcost); 
+	printf("\nThe total fuel cost is %lf\n", fuelcost); 
 	updateFile();
-
 	return fuelcost;
 
 }
@@ -93,6 +92,7 @@ double overallCosts(int dept1,int dept2,int dept3,int buildcosts,double fuelcost
 {
 	double overallcosts = dept1 + dept2 + dept3 + fuelcosts + buildcosts;
 	return overallcosts;
+	printf("\nThe overall cost for the entire mission is : %lf", overallcosts);
 }
 
 
