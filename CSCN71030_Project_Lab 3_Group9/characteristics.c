@@ -75,10 +75,8 @@ double* CalculatingTemperatureMoon() {
 			printf("Enter the temperature \n");
 			scanf_s("%lf", &characteristics.Temperature[i]);
 
-			 
-				printf("Temperature at Destination %d is %lf", i + 1, characteristics.Temperature[i]);
+			printf("Temperature at Destination %d is %lf", i + 1, characteristics.Temperature[i]);
 			}
-			return 0;
 		}
 	return characteristics.Temperature;
 }

@@ -63,13 +63,7 @@ int main(int argc, char *argv[])
 	//User inputs planet temp
   
 	//User inputs temperaures at different planets
-	
-	 
-	
-	
-	printf("The mass is %d \n", CalculatingMass()); 
-	TypesofRocket(); 
-	DeterminingBodymaterials(); 
+ 
 	double *  temp; 
 	temp = CalculatingTemperatureMoon();
 
