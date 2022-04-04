@@ -29,24 +29,7 @@ namespace CharacteristicsTest
 				Assert::AreEqual(result, 1);
 			}
 		}
-		TEST_METHOD(REQ__002_) {
-			double min = 200; 
-			double max = 500;
-			double expected[1] = { 250 };
-			double * actual = CalculatingTemperatureMoon(); 
-			int result; 
-			if (*expected >= min && *actual >= min && *actual <= max && *expected <= max)
-			{
-
-
-				result = 1;
-				Assert::AreEqual(result, 1);
-			}
-
-
-		}
-
-
+		
 	};
 }
 

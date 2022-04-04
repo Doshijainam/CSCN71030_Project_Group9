@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{7B9C0B4F-9500-4F04-B04F-A238A0DAC3DA}</ProjectGuid>
+    <ProjectGuid>{4496DA95-7F21-46AC-B8D7-7BF8531374D3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>financialsUnitTests</RootNamespace>
+    <RootNamespace>FinancialTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectSubType>NativeUnitTestProject</ProjectSubType>
   </PropertyGroup>
@@ -99,8 +99,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\JIGNESH PATEL\source\repos\CSCN71030_Project_Lab3_Group9\SpaceWare project\CSCN71030_Project_Lab 3_Group9\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Source.obj;Files.obj;Financials.obj;Parameters.obj;RocketLaunchAnimation.obj;characteristics.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\JIGNESH PATEL\source\repos\CSCN71030_Project_Lab3_Group9\SpaceWare project\CSCN71030_Project_Lab 3_Group9\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Files.obj;Financials.obj;Parameters.obj;RocketLaunchAnimation.obj;characteristics.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -157,7 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="financialsUnitTests.cpp" />
+    <ClCompile Include="FinancialTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -167,11 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CSCN71030_Project_Lab 3_Group9\CSCN71030_Project_Lab 3_Group9.vcxproj">
-      <Project>{b94a6053-9880-4d83-a7f7-85e454aa0b41}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

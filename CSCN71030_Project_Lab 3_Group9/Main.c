@@ -22,6 +22,7 @@
 
 #define MAX_STRING 100
 
+
 int main(int argc, char *argv[])
 {
 	char *n = argv[1];
@@ -59,6 +60,7 @@ int main(int argc, char *argv[])
 	//User inputs rocket material
 	DeterminingBodymaterials();
 
+  
 	//User inputs temperaures at different planets
 	
 	 

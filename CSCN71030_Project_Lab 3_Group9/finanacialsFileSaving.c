@@ -25,6 +25,7 @@ void readFinancial() {
 	//Scan for contents in file
 	for (int i = 0; i < DATA; i++)
 	{
+
 		if (fscanf(fpFinancial, "%d %d %d %f", &staff, &salary, &buildcosts, &fuelcosts) == 4)
 		set[i].staff = staff;
 		set[i].buildcosts = buildcosts;
